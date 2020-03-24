@@ -830,7 +830,10 @@ def downloadS3(bucket, objectName):
   except ClientError as e:
     print("\nAn error occurred when download a message from S3: %s" % e)
     return False
-  
+ 
+def checkS3(bucket, objectName):
+   return True
+
 def _createClientSecretsOauth2service(projectId):
 
   def _checkClientAndSecret(client_id, client_secret):
@@ -1154,7 +1157,10 @@ def message_is_backed_up(message_num, sqlcur, sqlconn, backup_folder):
     sqlresults = sqlcur.fetchall()
     for x in sqlresults:
       filename = x[0]
-      if os.path.isfile(os.path.join(backup_folder, filename)):
+      is_remote_storage = filename.find('s3://') == 0
+      if is_remote_storage:
+        return checkS3(options.s3_bucket, filename)
+      elif os.path.isfile(os.path.join(backup_folder, filename)):
         return True
     return False
 
