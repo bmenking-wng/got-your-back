@@ -18,6 +18,7 @@ You can download the current GYB release from the [GitHub Releases] page.
 
 # Documentation
 The GYB documentation is hosted in the [GitHub Wiki]
+Additional documentation for this fork at [GitHub Wiki 2]
 
 # Mailing List / Discussion group
 The GYB mailing list / discussion group is hosted on [Google Groups].  You can join the list and interact via email, or just post from the web itself.
@@ -29,3 +30,4 @@ GYB is maintained by <a href="mailto:jay0lee@gmail.com">Jay Lee</a>. Please dire
 [GitHub]: https://github.com/jay0lee/got-your-back/tree/master
 [GitHub Wiki]: https://github.com/jay0lee/got-your-back/wiki
 [Google Groups]: http://groups.google.com/group/got-your-back
+[GitHub Wiki 2]: https://github.com/bmenking-wng/got-your-back/wiki/Addtional-Documentation
